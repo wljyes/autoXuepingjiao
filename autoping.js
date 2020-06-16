@@ -44,7 +44,7 @@ function randomNum(minNum,maxNum){
   } 
 } 
 
-var memo = ["很细心", "很有耐心", "讲得好"];
+var memo = ["老师耐心", "很细心", "很有耐心", "讲得好"];
 
 $('table.pTable tbody tr').each(function(trIndex, trItem) {
     var params = $(trItem).find('td:last a').attr('href').split('?')[1].split('&');
@@ -53,7 +53,7 @@ $('table.pTable tbody tr').each(function(trIndex, trItem) {
     settings.data.jxb = jxb;
     settings.data.teaId = teaId;
     form = xwww(settings.data);
-    form += "&memo[]=" + memo[randomNum(0, 2)];
+    form += "&memo[]=" + memo[randomNum(1, 3)];
     form += "&memo[]=无";
     form += "&zbCount=10";
     $.post({
